@@ -26,8 +26,11 @@ void RVOServer::_process(float delta) {
     emit_signal("simulation_updated", this);
 }
 
-int RVOServer::add_collision_agent(float x_position, float y_position) {
-    return sim->addAgent(RVO::Vector2(x_position, y_position));
+int RVOServer::add_collision_agent(float x_position, float y_position, float agent_radius, float agent_speed) {
+    int new_agent_num = sim->addAgent(RVO::Vector2(x_position, y_position));
+    sim->setAgentRadius(new_agent_num, agent_radius);
+    sim->setAgentMaxSpeed(new_agent_num, agent_speed);
+    return new_agent_num;
 }
 
 void RVOServer::set_agent_preferred_velocity(int agent_num, float x_direction, float y_direction) {
