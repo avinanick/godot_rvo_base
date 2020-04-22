@@ -12,6 +12,7 @@ class CollisionObstacle: public Node {
 
 private:
     int obstacle_number = 0; //pretty sure this isn't a thing
+    // I need to figure out some way to store the object verts
 
 public:
     static void _register_methods();
