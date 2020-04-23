@@ -3,6 +3,9 @@
 
 #include <Godot.hpp>
 #include <Node.hpp>
+#include <Object.hpp>
+#include <SceneTree.hpp>
+#include <Viewport.hpp>
 #include "../RVO.h"
 #include "../RVOServer/RVOServer.h"
 
