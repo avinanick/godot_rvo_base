@@ -19,6 +19,9 @@ CollisionAgent::~CollisionAgent() {
 
 void CollisionAgent::_init() {
     agent_number = 0;
+    Object* MyScriptSingleton = get_tree()->get_root()->get_node(NodePath("CollisionServer"));
+    collision_server = static_cast<RVOServer *>(MyScriptSingleton);
+
 }
 
 void CollisionAgent::set_goal(float x_position, float y_position) {
