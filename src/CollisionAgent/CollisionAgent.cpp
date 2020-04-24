@@ -27,3 +27,13 @@ void CollisionAgent::_init() {
 void CollisionAgent::set_goal(float x_position, float y_position) {
     agent_goal = Vector2(x_position, y_position);
 }
+
+void CollisionAgent::setup_agent(float x_position, float y_position, float agent_radius, float agent_speed) {
+    agent_number = collision_server->add_collision_agent(x_position, y_position, agent_radius, agent_speed);
+    agent_position = Vector2(x_position, y_position);
+}
+
+void CollisionAgent::update_agent_position() {
+    agent_position = collision_server->get_agent_position(agent_number);
+    emit_signal("position_updated", agent_position);
+}

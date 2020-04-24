@@ -32,6 +32,8 @@ public:
 
     void set_goal(float x_position, float y_position);
 
+    void setup_agent(float x_position, float y_position, float agent_radius, float agent_speed);
+
     void update_agent_position();
 };
 

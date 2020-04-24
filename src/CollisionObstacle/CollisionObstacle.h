@@ -4,6 +4,7 @@
 #include <Godot.hpp>
 #include <Node.hpp>
 #include "../RVO.h"
+#include "../RVOServer/RVOServer.h"
 
 namespace godot {
 
