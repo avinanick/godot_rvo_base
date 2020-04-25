@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://bin/collisionagent.gdns" type="Script" id=1]
+
+[node name="CollisionAgent" type="Node"]
+script = ExtResource( 1 )
