@@ -18,6 +18,14 @@ _global_script_class_icons={
 config/name="Demo"
 config/icon="res://icon.png"
 
+[autoload]
+
+CollisionServer="*res://Scenes/CollisionServer.tscn"
+
+[gdnative]
+
+singletons=[ "res://bin/collisionserver.gdnlib" ]
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
