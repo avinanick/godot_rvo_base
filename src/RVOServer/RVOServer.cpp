@@ -39,6 +39,6 @@ void RVOServer::set_agent_preferred_velocity(int agent_num, float x_direction, f
 
 Vector2 RVOServer::get_agent_position(int agent_num) {
     RVO::Vector2 agent_position = sim->getAgentPosition(agent_num);
-    Vector2 *godot_vector_position = new Vector2(agent_position.x, agent_position.y);
-    return *godot_vector_position;
+    godot::Vector2 godot_vector_position = godot::Vector2(agent_position.x(), agent_position.y());
+    return godot_vector_position;
 }
