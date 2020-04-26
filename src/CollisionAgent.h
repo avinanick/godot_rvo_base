@@ -18,6 +18,8 @@ private:
     int agent_number = 0;
     Vector2 agent_position = Vector2(0,0);
     Vector2 agent_goal;
+    float agent_radius = 10;
+    float agent_speed = 5;
     RVOServer *collision_server;
 
 public:
