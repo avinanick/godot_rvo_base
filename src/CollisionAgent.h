@@ -16,7 +16,7 @@ class CollisionAgent: public Node {
 
 private:
     int agent_number = 0;
-    Vector2 agent_position;
+    Vector2 agent_position = Vector2(0,0);
     Vector2 agent_goal;
     RVOServer *collision_server;
 
