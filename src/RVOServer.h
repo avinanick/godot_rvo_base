@@ -4,7 +4,7 @@
 #include <Godot.hpp>
 #include <Node.hpp>
 #include <Vector2.hpp>
-#include "../RVO.h"
+#include "RVO.h"
 
 namespace godot {
 

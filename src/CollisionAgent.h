@@ -6,8 +6,8 @@
 #include <Object.hpp>
 #include <SceneTree.hpp>
 #include <Viewport.hpp>
-#include "../RVO.h"
-#include "../RVOServer/RVOServer.h"
+#include "RVO.h"
+#include "RVOServer.h"
 
 namespace godot {
 

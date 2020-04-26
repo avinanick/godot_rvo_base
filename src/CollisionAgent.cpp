@@ -24,6 +24,10 @@ void CollisionAgent::_init() {
 
 }
 
+void CollisionAgent::_process(float delta) {
+    update_agent_position();
+}
+
 void CollisionAgent::set_goal(float x_position, float y_position) {
     agent_goal = Vector2(x_position, y_position);
 }
