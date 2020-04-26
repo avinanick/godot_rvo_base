@@ -1,0 +1,20 @@
+[general]
+
+singleton=false
+load_once=true
+symbol_prefix="godot_"
+reloadable=true
+
+[entry]
+
+OSX.64="res://bin/osx/libcollision.dylib"
+Windows.64="res://bin/win64/libcollision.dll"
+X11.64="res://bin/x11/libcollision.so"
+X11.32="res://bin/x11/libcollision.so"
+
+[dependencies]
+
+OSX.64=[  ]
+Windows.64=[  ]
+X11.64=[  ]
+X11.32=[  ]

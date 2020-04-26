@@ -1,0 +1,7 @@
+[gd_resource type="GDNativeLibrary" format=2]
+
+[resource]
+entry/X11.64 = "res://bin/x11/libgdexample.so"
+entry/X11.32 = "res://bin/x11/libgdexample.so"
+dependency/X11.64 = [  ]
+dependency/X11.32 = [  ]

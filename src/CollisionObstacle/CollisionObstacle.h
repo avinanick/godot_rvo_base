@@ -3,8 +3,8 @@
 
 #include <Godot.hpp>
 #include <Node.hpp>
-#include "../RVO.h"
-#include "../RVOServer/RVOServer.h"
+#include "RVO.h"
+#include "RVOServer.h"
 
 namespace godot {
 
