@@ -32,6 +32,8 @@ void CollisionAgent::_process(float delta) {
 
 void CollisionAgent::set_goal(float x_position, float y_position) {
     agent_goal = Vector2(x_position, y_position);
+    Vector2 preferred_velocity = (agent_goal - agent_position).normalized();
+    collision_server->set_agent_preferred_velocity(agent_number, preferred_velocity.x, preferred_velocity.y);
 }
 
 void CollisionAgent::setup_agent(float x_position, float y_position, float agent_radius, float agent_speed) {
@@ -49,7 +51,7 @@ void CollisionAgent::update_agent_position() {
         collision_server->set_agent_preferred_velocity(agent_number, 0.0, 0.0);
     }
     else {
-        Vector2 preferred_velocity = (agent_position - agent_goal).normalized();
+        Vector2 preferred_velocity = (agent_goal - agent_position).normalized();
         collision_server->set_agent_preferred_velocity(agent_number, preferred_velocity.x, preferred_velocity.y);
     }
 }
