@@ -4,6 +4,10 @@ using namespace godot;
 
 void RVOServer::_register_methods() {
     register_method("_process", &RVOServer::_process);
+    register_method("add_collision_agent", &RVOServer::add_collision_agent);
+    register_method("set_agent_preferred_velocity", &RVOServer::set_agent_preferred_velocity);
+    register_method("get_agent_position", &RVOServer::get_agent_position);
+
     register_signal<RVOServer>((char *)"simulation_updated");
 }
 

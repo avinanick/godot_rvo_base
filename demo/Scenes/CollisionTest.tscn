@@ -1,11 +1,54 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Ground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/BasicCollisionAgentUse.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/CollisionServer.tscn" type="PackedScene" id=3]
 
 [node name="CollisionTest" type="Spatial"]
 
 [node name="Ground" parent="." instance=ExtResource( 1 )]
 
-[node name="BasicCollisionAgent" parent="." instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.198, 3.86358, -7.11664 )
+[node name="CollisionServer" parent="." instance=ExtResource( 3 )]
+
+[node name="BasicCollisionAgent" parent="CollisionServer" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 2.1, -15 )
+destination = Vector2( 15, 15 )
+speed = 10.0
+
+[node name="BasicCollisionAgent6" parent="CollisionServer" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 2.1, -10 )
+destination = Vector2( 15, 10 )
+speed = 10.0
+
+[node name="BasicCollisionAgent7" parent="CollisionServer" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 2.1, -10 )
+destination = Vector2( 10, 10 )
+speed = 10.0
+
+[node name="BasicCollisionAgent2" parent="CollisionServer" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 2.1, 15 )
+destination = Vector2( -15, -15 )
+speed = 10.0
+
+[node name="BasicCollisionAgent5" parent="CollisionServer" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 2.1, 10 )
+destination = Vector2( -15, -10 )
+speed = 10.0
+
+[node name="BasicCollisionAgent4" parent="CollisionServer" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.94814, 2.1, -15 )
+destination = Vector2( -15, 15 )
+speed = 10.0
+
+[node name="BasicCollisionAgent3" parent="CollisionServer" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.69781, 2.1, 15 )
+destination = Vector2( 15, -15 )
+speed = 10.0
+
+[node name="BasicCollisionAgent8" parent="CollisionServer" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 2.1, 10 )
+destination = Vector2( -10, -10 )
+speed = 10.0
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.0187723, 0.627329, -0.778528, 0.0405271, 0.778502, 0.626332, 0.999002, -0.0197938, -0.0400381, -22.3023, 17.1816, 0 )
