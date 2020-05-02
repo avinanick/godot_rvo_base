@@ -8,7 +8,7 @@ void RVOServer::_register_methods() {
     register_method("set_agent_preferred_velocity", &RVOServer::set_agent_preferred_velocity);
     register_method("get_agent_position", &RVOServer::get_agent_position);
 
-    register_signal<RVOServer>((char *)"simulation_updated");
+    register_signal<RVOServer>(godot::String("simulation_updated"), godot::Dictionary());
 }
 
 RVOServer::RVOServer() {

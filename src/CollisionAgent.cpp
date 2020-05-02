@@ -9,7 +9,7 @@ void CollisionAgent::_register_methods() {
     register_method("update_agent_position", &CollisionAgent::update_agent_position);
 
     register_signal<CollisionAgent>((char *)"position_updated", "new_position", GODOT_VARIANT_TYPE_VECTOR2);
-    register_signal<CollisionAgent>((char *)"goal_reached");
+    register_signal<CollisionAgent>((char *)"goal_reached", godot::Dictionary());
 }
 
 CollisionAgent::CollisionAgent() {
